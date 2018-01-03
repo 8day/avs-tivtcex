@@ -3,11 +3,11 @@ try:
 
 
 	# query for file paths.
-	path_to_extended_ovr = r"extended-overrides.txt"
-	path_to_timecodes = r"tdecimate-timecodes.txt"
-	path_to_org_frames = r"tdecimate-original-frame-sids.txt"
-	path_to_edl = r"edl.txt"
-	path_to_timestamps = r"timestamps.txt"
+	path_to_extended_ovr = "extended-overrides.txt"
+	path_to_timecodes = "tdecimate-timecodes.txt"
+	path_to_org_frames = "tdecimate-original-frame-sids.txt"
+	path_to_edl = "edl.txt"
+	path_to_timestamps = "timestamps.txt"
 	gui_title = "Generation of EDL and timestamps"
 	gui_db = [ \
 		[ \
