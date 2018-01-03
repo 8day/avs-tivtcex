@@ -2,7 +2,7 @@
 - AviSynth 2.5+;
 - AvsP or AvsPmod;
 - EDL plugin for AviSynth;
-- TIVTC plugin for AviSynth with version 1.0.5.1, or the one that has argument "orgOut".
+- TIVTC plugin for AviSynth with version 1.0.5.1, or the one that has argument `orgOut`.
 
 
 ## workflow
@@ -15,7 +15,7 @@
 		- `ii` -- to mark bob-deinterlaced sections;
 		- `e` -- to mark sections with extrapolated even fields from src/undecimated clip;
 		- `o` -- to mark sections with extrapolated odd fields from src/undecimated clip.
-	- save *frames* that need special processing using any of the specifiers used for ranges, excluding `ii`.  you can add `±N` to specify offset in relation to current frame within clip that will be mapped to specifier;
+	- save *frames* that need special processing using any of the specifiers used for ranges, excluding `ii`.  you can add `Â±N` to specify offset in relation to current frame within clip that will be mapped to specifier;
 	- decimation pattern is not supported and must be inserted manually after TDecimate overrides will be generated;
 	- ranges use classic TIVTC format `N,M`;
 	- tabs/spaces are allowed in any position and in "unlimited" amount;
@@ -28,14 +28,14 @@
 4. load AviSynth script `tivtcex-phase-4-*.avs` with TDecimate set up for second pass, but also:
 	1. use `orgOut` argument to set path to a file with list of original frame SIDs used in decimated timeline;
 	2. set `tcvf1 = False`;
-	3. close AviSynth script after a ~10 seconds after the clip have been generated.  this is needed because sometimes TIVTC does not generate `orgOut` file if you close AviSynth script immediately.  probably some bug;
+	3. close AviSynth script ~10 seconds after the clip have been generated.  this is needed because sometimes TIVTC does not generate `orgOut` file if you close AviSynth script immediately.  probably some bug;
 5. run second AvsP macro `tivtcex-phase-5-*.py` to generate EDL and new timestamps;
 6. create AviSynth script as shown in `tivtcex-phase-6-clip.avs` with TDecimate replaced by EDL:
 	- EDL() supports only planar YUV color spaces;
-	- EDL() supports only field-based clips.  support for frame-based clips is in TODO list;
 	- all clips must be in same color space (YV12, YV16, etc.);
+	- EDL() supports only field-based clips.  support for frame-based clips is in TODO list;
 	- clips for all specifiers must be supplied to EDL, even if you don't use some of them;
-	- you can use "dummies" instead of clips with actual processing.  clips for these specifiers may be used interchangeably: v/vc/f/fc/i/e/o, or you can use BlankClip(field_matched).  we need special clip only for bob-deinterlacing because it must have twice as much frames as the `v/vc/f/fc/i/e/o`, but once again, you can use `BlankClip(field_matched, field_matched.Framecount() * 2)`.
+	- you may use `BlankClip(field_matched)` dummy for `v/vc/f/fc/i/e/o`.  for `ii` you must use `BlankClip(field_matched, field_matched.Framecount() * 2)`.
 	- don't be afraid of performance issues as clips not referenced in EDL will be used only once, during init, to check if all clips have similar properties (picture related stuff).
 
 
