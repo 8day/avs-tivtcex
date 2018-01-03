@@ -1,5 +1,5 @@
 try:
-	import os, re
+	import re
 
 
 	# query for file paths.
