@@ -67,4 +67,4 @@ comment ::= "#" any_symbol?
 * tabs/spaces are allowed in any position and in "unlimited" amount.
 ```
 
-I've read somewhere that you should compile AviSynth plugins with __stdcall, but because I couldn't find the source of this info, and because TIVTC 1.0.5 is set to use __cdecl, both DLLs were compiled using default __cdecl.
+I've read somewhere that you should compile AviSynth plugins with `__stdcall`, but because I couldn't find the source of this info, and because TIVTC 1.0.5 is set to use `__cdecl`, both EDL and TIVTC linked in the prerequisites were compiled using default -- `__cdecl`.
