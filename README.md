@@ -1,8 +1,8 @@
 ## prerequisites
-- AviSynth 2.5+;
-- AvsP or AvsPmod;
-- EDL plugin for AviSynth;
-- TIVTC plugin for AviSynth with version 1.0.5.1, or the one that has argument `orgOut`.
+- [AviSynth 2.5+](https://sourceforge.net/projects/avisynth2/);
+- AvsP or [AvsPmod](https://github.com/AvsPmod/AvsPmod/releases);
+- [EDL](https://github.com/8day/avs-edl/releases) plugin for AviSynth;
+- TIVTC plugin for AviSynth with version [1.0.5.1](https://github.com/8day/avs-tivtc/releases), or the one that has argument `orgOut`.
 
 
 ## workflow
