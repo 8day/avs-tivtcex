@@ -2,7 +2,8 @@
 - [AviSynth 2.5+](https://sourceforge.net/projects/avisynth2/);
 - AvsP or [AvsPmod](https://github.com/AvsPmod/AvsPmod/releases);
 - [EDL](https://github.com/8day/avs-edl/releases) plugin for AviSynth;
-- TIVTC plugin for AviSynth with version [1.0.5.1](https://github.com/8day/avs-tivtc/releases), or the one that has argument `orgOut`.
+- TIVTC plugin for AviSynth with version [1.0.5.1](https://github.com/8day/avs-tivtc/releases), or the one that has argument `orgOut`;
+- "player" of AviSynth scripts.  most likely either [VirtualDub](https://sourceforge.net/projects/virtualdub/?source=directory) or [AVSMeter](https://forum.doom9.org/showthread.php?t=174797).
 
 
 ## workflow
