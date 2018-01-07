@@ -1,7 +1,6 @@
 LoadPlugin("dgdecode.dll")
 LoadPlugin("tivtc.dll")
 LoadPlugin("vinverse.dll")
-LoadCPlugin("yadif.dll")
 LoadPlugin("edl.dll")
 
 
@@ -9,7 +8,7 @@ src = MPEG2Source("file.d2v")
 fm = src.TFM(mode = 0, pp = 0, hint = False, input = "tfm-metrics.txt")
 decomb = fm.Vinverse()
 blend_deinter = BlankClip(fm)
-bob_deinter = src.YADIF(1)
+bob_deinter = src.Bob()
 extra_even = bob_deinter.SelectEvery(2, 0)
 extra_odd = bob_deinter.SelectEvery(2, 1)
 
